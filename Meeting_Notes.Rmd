@@ -1,0 +1,84 @@
+---
+title: "Meeting Notes"
+output: 
+  html_notebook: 
+    highlight: tango
+    theme: cerulean
+    toc: yes
+---
+
+# Feb 22, 2018 (by Hanna)
+
+We all have a database
+
+Kat: pick from list of repositories
+
+Jeff: pick from list of repositories
+
+Brody: Dryad
+
+Hannah: SRA 
+
+
+
+
+  
+**Keywords: endophyte, plants, illumina, 16s**
+ 
+
+
+
+Download fasta files and put them on the cluster:
+
+* Every database has a different format
+
+* It will be confusing
+
+* Have to figure out what they’re giving you
+
+    i.e. each individual or a scramble in each fasta file
+
+    do they give phred score? 
+
+* Better to get quality score if possible, but we can calculate
+ 
+
+
+
+Information to find for each sample **(Could try to contact authors)**: 
+
+* location of species
+
+* Treatment
+
+* Year of experiment
+
+* Illumina platform
+
+* Linked paper if possible
+
+  We could include the type of barcoding in our analysis (could bias sequence and abundance of illumina sequencing).
+ 
+16s:
+
+* Usually people look for v4
+
+* Take note of which area of the 16s they looked at
+
+* Also which **specific barcode they used**
+ 
+*Goal: ten samples each max*
+ 
+
+ 
+Notes about the flow to expect after data mining:
+
+  Select data
+
+  Quality filtering
+
+  Qiime 2 and OTU assignment
+
+  Functional assignment in picrust (KEGG orthology database)
+  
+  Statistical analysis (mostly multivariate... I recommend you get familiar with Numerical Ecology in R)
