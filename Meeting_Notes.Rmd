@@ -19,7 +19,9 @@ Work flow so far:
   3. Standardize the quality of our sequences... this is a simple piece of code but quite complicated theoretically. What choices do we make? Do we choose the standard? Should we be more difficult since were looking at a lot of sources? **We should discuss this** 
   
 Please become familiar with TRIMMOMATIC: 
+
   website: http://www.usadellab.org/cms/?page=trimmomatic
+  
   manual: http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf
 
 
