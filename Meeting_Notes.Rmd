@@ -41,9 +41,9 @@ Then we search for illumina.
 
 We all have a database
 
-Kat: pick from list of repositories
+Kat: pick from list of repositories (https://www.nature.com/sdata/policies/repositories)
 
-Jeff: pick from list of repositories
+Jeff: pick from list of repositories (https://www.nature.com/sdata/policies/repositories)
 
 Brody: Dryad
 
