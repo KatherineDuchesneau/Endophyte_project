@@ -6,6 +6,34 @@ output:
     theme: cerulean
     toc: yes
 ---
+# March 6th, 2018 (kat)
+
+We should use python to standardize our fasta format... what I mean by fasta format is the information contained in the header. Some programs will require a specific set of information in the header, honestly I dont remember exactly what it is but using python it shouldnt be hard to deal with that.
+
+Work flow so far:
+
+  1. Extract Fasta files (SRA: https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc)
+
+  2. Convert the header format (Python, we should use a line by line format so we use as little computational power as possible, which is how I did my assignment for the course so we would have a starting point)
+
+  3. Standardize the quality of our sequences... this is a simple piece of code but quite complicated theoretically. What choices do we make? Do we choose the standard? Should we be more difficult since were looking at a lot of sources? **We should discuss this** 
+  
+Please become familiar with TRIMMOMATIC: 
+  website: http://www.usadellab.org/cms/?page=trimmomatic
+  manual: http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf
+
+
+# March 2nd, 2018 (kat)
+
+Jeff says "I was looking at EBI Metagenomics / ENA European Nucleotide Archive"
+
++ Good point: we will need to make sure that the samples we take dont over lap.
+
+**CHANGE IN Keywords: endophyte, 16s**
+
+Then we search for illumina.
+
+---------------------------------------------------------------------------------
 
 # Feb 22, 2018 (by Hanna)
 
