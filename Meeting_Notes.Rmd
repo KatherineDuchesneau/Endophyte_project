@@ -6,6 +6,15 @@ output:
     theme: cerulean
     toc: yes
 ---
+# March 7th, 2018 (kat)
+
+**CHANGE IN Keywords: endophyte, AMPLICON, illumina**
+
+https://www.ncbi.nlm.nih.gov/sra/?term=endophyte+AND+amplicon+AND+illumina --> Hannah/ Jeff/ Kat get 1/3 of the results each...
+
+Brody stays with DRYAD.
+
+
 # March 6th, 2018 (kat)
 
 We should use python to standardize our fasta format... what I mean by fasta format is the information contained in the header. Some programs will require a specific set of information in the header, honestly I dont remember exactly what it is but using python it shouldnt be hard to deal with that.
