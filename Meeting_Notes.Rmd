@@ -24,7 +24,11 @@ Please become familiar with TRIMMOMATIC:
   
   manual: http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf
 
-
+  4. QIIME to assign OTU (https://qiime2.org/)... PROBLEM: QIIME is on the cluster not QIIME2... what should we do?
+  
+  5. PICRUst (http://picrust.github.io/picrust/)
+  
+  
 # March 2nd, 2018 (kat)
 
 Jeff says "I was looking at EBI Metagenomics / ENA European Nucleotide Archive"
