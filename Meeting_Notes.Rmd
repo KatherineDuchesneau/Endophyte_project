@@ -10,12 +10,18 @@ output:
 
 Brody's keyword searches:
 
+
 "search term" - number of relevant hits
 
+
 "endophyte amplicon illumina" - 0
+
 "endophyte amplicon" - 1
+
 "endophyte illumina" - 1
+
 "endophyte 16s" - 1
+
 
 
 # March 7th, 2018 (kat)
