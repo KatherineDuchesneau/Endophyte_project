@@ -13,9 +13,7 @@ output:
 
 Brody's keyword searches:
 
-
 "search term" - number of relevant hits
-
 
 "endophyte amplicon illumina" - 0
 
