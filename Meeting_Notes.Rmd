@@ -12,6 +12,16 @@ output:
 
 # March 20th, 2018 (Hannah)
 
+Project Numbers:
+
+PRJNA381586
+PRJNA310879
+PRJNA327111
+PRJNA327111
+
+
+# March 20th, 2018 (Hannah)
+
 ```
 #!/bin/bash
 #SBATCH -c 12
