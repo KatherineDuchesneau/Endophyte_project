@@ -1,7 +1,10 @@
 ---
 title: "Meeting Notes"
-output: 
-  html_notebook: 
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+  html_notebook:
     highlight: tango
     theme: cerulean
     toc: yes
@@ -21,7 +24,6 @@ Brody's keyword searches:
 "endophyte illumina" - 1
 
 "endophyte 16s" - 1
-
 
 
 # March 7th, 2018 (kat)

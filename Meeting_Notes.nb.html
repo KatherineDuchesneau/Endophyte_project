@@ -156,16 +156,61 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
+<li><a href="#march-14th-2018-brody">March 14th, 2018 (Brody)</a></li>
+<li><a href="#march-7th-2018-kat">March 7th, 2018 (kat)</a></li>
+<li><a href="#march-6th-2018-kat">March 6th, 2018 (kat)</a></li>
+<li><a href="#march-2nd-2018-kat">March 2nd, 2018 (kat)</a></li>
 <li><a href="#feb-22-2018-by-hanna">Feb 22, 2018 (by Hanna)</a></li>
 </ul>
 </div>
 
-<!-- rnb-text-begin -->
+<div id="march-14th-2018-brody" class="section level1">
+<h1>March 14th, 2018 (Brody)</h1>
+<p>Brody’s keyword searches:</p>
+<p>“search term” - number of relevant hits</p>
+<p>“endophyte amplicon illumina” - 0</p>
+<p>“endophyte amplicon” - 1</p>
+<p>“endophyte illumina” - 1</p>
+<p>“endophyte 16s” - 1</p>
+</div>
+<div id="march-7th-2018-kat" class="section level1">
+<h1>March 7th, 2018 (kat)</h1>
+<p><strong>CHANGE IN Keywords: endophyte, AMPLICON, illumina</strong></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/sra/?term=endophyte+AND+amplicon+AND+illumina" class="uri">https://www.ncbi.nlm.nih.gov/sra/?term=endophyte+AND+amplicon+AND+illumina</a> –&gt; Hannah/ Jeff/ Kat get 1/3 of the results each…</p>
+<p>Brody stays with DRYAD.</p>
+</div>
+<div id="march-6th-2018-kat" class="section level1">
+<h1>March 6th, 2018 (kat)</h1>
+<p>We should use python to standardize our fasta format… what I mean by fasta format is the information contained in the header. Some programs will require a specific set of information in the header, honestly I dont remember exactly what it is but using python it shouldnt be hard to deal with that.</p>
+<p>Work flow so far:</p>
+<ol style="list-style-type: decimal">
+<li><p>Extract Fasta files (SRA: <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc" class="uri">https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc</a>)</p></li>
+<li><p>Convert the header format (Python, we should use a line by line format so we use as little computational power as possible, which is how I did my assignment for the course so we would have a starting point)</p></li>
+<li><p>Standardize the quality of our sequences… this is a simple piece of code but quite complicated theoretically. What choices do we make? Do we choose the standard? Should we be more difficult since were looking at a lot of sources? <strong>We should discuss this</strong></p></li>
+</ol>
+<p>Please become familiar with TRIMMOMATIC:</p>
+<p>website: <a href="http://www.usadellab.org/cms/?page=trimmomatic" class="uri">http://www.usadellab.org/cms/?page=trimmomatic</a></p>
+<p>manual: <a href="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf" class="uri">http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf</a></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>QIIME to assign OTU (<a href="https://qiime2.org/" class="uri">https://qiime2.org/</a>)… PROBLEM: QIIME is on the cluster not QIIME2… what should we do?</p></li>
+<li><p>PICRUst (<a href="http://picrust.github.io/picrust/" class="uri">http://picrust.github.io/picrust/</a>)</p></li>
+</ol>
+</div>
+<div id="march-2nd-2018-kat" class="section level1">
+<h1>March 2nd, 2018 (kat)</h1>
+<p>Jeff says “I was looking at EBI Metagenomics / ENA European Nucleotide Archive”</p>
+<ul>
+<li>Good point: we will need to make sure that the samples we take dont over lap.</li>
+</ul>
+<p><strong>CHANGE IN Keywords: endophyte, 16s</strong></p>
+<p>Then we search for illumina.</p>
+<hr />
+</div>
 <div id="feb-22-2018-by-hanna" class="section level1">
 <h1>Feb 22, 2018 (by Hanna)</h1>
 <p>We all have a database</p>
-<p>Kat: pick from list of repositories</p>
-<p>Jeff: pick from list of repositories</p>
+<p>Kat: pick from list of repositories (<a href="https://www.nature.com/sdata/policies/repositories" class="uri">https://www.nature.com/sdata/policies/repositories</a>)</p>
+<p>Jeff: pick from list of repositories (<a href="https://www.nature.com/sdata/policies/repositories" class="uri">https://www.nature.com/sdata/policies/repositories</a>)</p>
 <p>Brody: Dryad</p>
 <p>Hannah: SRA</p>
 <p><strong>Keywords: endophyte, plants, illumina, 16s</strong></p>
@@ -200,10 +245,9 @@ $(document).ready(function () {
 <p>Qiime 2 and OTU assignment</p>
 <p>Functional assignment in picrust (KEGG orthology database)</p>
 <p>Statistical analysis (mostly multivariate… I recommend you get familiar with Numerical Ecology in R)</p>
-<!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTWVldGluZyBOb3RlcyIKb3V0cHV0OiAKICBodG1sX25vdGVib29rOiAKICAgIGhpZ2hsaWdodDogdGFuZ28KICAgIHRoZW1lOiBjZXJ1bGVhbgogICAgdG9jOiB5ZXMKLS0tCgojIEZlYiAyMiwgMjAxOCAoYnkgSGFubmEpCgpXZSBhbGwgaGF2ZSBhIGRhdGFiYXNlCgpLYXQ6IHBpY2sgZnJvbSBsaXN0IG9mIHJlcG9zaXRvcmllcwoKSmVmZjogcGljayBmcm9tIGxpc3Qgb2YgcmVwb3NpdG9yaWVzCgpCcm9keTogRHJ5YWQKCkhhbm5haDogU1JBIAoKCgoKICAKKipLZXl3b3JkczogZW5kb3BoeXRlLCBwbGFudHMsIGlsbHVtaW5hLCAxNnMqKgogCgoKCkRvd25sb2FkIGZhc3RhIGZpbGVzIGFuZCBwdXQgdGhlbSBvbiB0aGUgY2x1c3RlcjoKCiogRXZlcnkgZGF0YWJhc2UgaGFzIGEgZGlmZmVyZW50IGZvcm1hdAoKKiBJdCB3aWxsIGJlIGNvbmZ1c2luZwoKKiBIYXZlIHRvIGZpZ3VyZSBvdXQgd2hhdCB0aGV54oCZcmUgZ2l2aW5nIHlvdQoKICAgIGkuZS4gZWFjaCBpbmRpdmlkdWFsIG9yIGEgc2NyYW1ibGUgaW4gZWFjaCBmYXN0YSBmaWxlCgogICAgZG8gdGhleSBnaXZlIHBocmVkIHNjb3JlPyAKCiogQmV0dGVyIHRvIGdldCBxdWFsaXR5IHNjb3JlIGlmIHBvc3NpYmxlLCBidXQgd2UgY2FuIGNhbGN1bGF0ZQogCgoKCkluZm9ybWF0aW9uIHRvIGZpbmQgZm9yIGVhY2ggc2FtcGxlICoqKENvdWxkIHRyeSB0byBjb250YWN0IGF1dGhvcnMpKio6IAoKKiBsb2NhdGlvbiBvZiBzcGVjaWVzCgoqIFRyZWF0bWVudAoKKiBZZWFyIG9mIGV4cGVyaW1lbnQKCiogSWxsdW1pbmEgcGxhdGZvcm0KCiogTGlua2VkIHBhcGVyIGlmIHBvc3NpYmxlCgogIFdlIGNvdWxkIGluY2x1ZGUgdGhlIHR5cGUgb2YgYmFyY29kaW5nIGluIG91ciBhbmFseXNpcyAoY291bGQgYmlhcyBzZXF1ZW5jZSBhbmQgYWJ1bmRhbmNlIG9mIGlsbHVtaW5hIHNlcXVlbmNpbmcpLgogCjE2czoKCiogVXN1YWxseSBwZW9wbGUgbG9vayBmb3IgdjQKCiogVGFrZSBub3RlIG9mIHdoaWNoIGFyZWEgb2YgdGhlIDE2cyB0aGV5IGxvb2tlZCBhdAoKKiBBbHNvIHdoaWNoICoqc3BlY2lmaWMgYmFyY29kZSB0aGV5IHVzZWQqKgogCipHb2FsOiB0ZW4gc2FtcGxlcyBlYWNoIG1heCoKIAoKIApOb3RlcyBhYm91dCB0aGUgZmxvdyB0byBleHBlY3QgYWZ0ZXIgZGF0YSBtaW5pbmc6CgogIFNlbGVjdCBkYXRhCgogIFF1YWxpdHkgZmlsdGVyaW5nCgogIFFpaW1lIDIgYW5kIE9UVSBhc3NpZ25tZW50CgogIEZ1bmN0aW9uYWwgYXNzaWdubWVudCBpbiBwaWNydXN0IChLRUdHIG9ydGhvbG9neSBkYXRhYmFzZSkKICAKICBTdGF0aXN0aWNhbCBhbmFseXNpcyAobW9zdGx5IG11bHRpdmFyaWF0ZS4uLiBJIHJlY29tbWVuZCB5b3UgZ2V0IGZhbWlsaWFyIHdpdGggTnVtZXJpY2FsIEVjb2xvZ3kgaW4gUikK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTWVldGluZyBOb3RlcyIKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQ6CiAgICBkZl9wcmludDogcGFnZWQKICAgIHRvYzogeWVzCiAgaHRtbF9ub3RlYm9vazoKICAgIGhpZ2hsaWdodDogdGFuZ28KICAgIHRoZW1lOiBjZXJ1bGVhbgogICAgdG9jOiB5ZXMKLS0tCiMgTWFyY2ggMTR0aCwgMjAxOCAoQnJvZHkpCgpCcm9keSdzIGtleXdvcmQgc2VhcmNoZXM6CgoKInNlYXJjaCB0ZXJtIiAtIG51bWJlciBvZiByZWxldmFudCBoaXRzCgoKImVuZG9waHl0ZSBhbXBsaWNvbiBpbGx1bWluYSIgLSAwCgoiZW5kb3BoeXRlIGFtcGxpY29uIiAtIDEKCiJlbmRvcGh5dGUgaWxsdW1pbmEiIC0gMQoKImVuZG9waHl0ZSAxNnMiIC0gMQoKCiMgTWFyY2ggN3RoLCAyMDE4IChrYXQpCgoqKkNIQU5HRSBJTiBLZXl3b3JkczogZW5kb3BoeXRlLCBBTVBMSUNPTiwgaWxsdW1pbmEqKgoKaHR0cHM6Ly93d3cubmNiaS5ubG0ubmloLmdvdi9zcmEvP3Rlcm09ZW5kb3BoeXRlK0FORCthbXBsaWNvbitBTkQraWxsdW1pbmEgLS0+IEhhbm5haC8gSmVmZi8gS2F0IGdldCAxLzMgb2YgdGhlIHJlc3VsdHMgZWFjaC4uLgoKQnJvZHkgc3RheXMgd2l0aCBEUllBRC4KCgojIE1hcmNoIDZ0aCwgMjAxOCAoa2F0KQoKV2Ugc2hvdWxkIHVzZSBweXRob24gdG8gc3RhbmRhcmRpemUgb3VyIGZhc3RhIGZvcm1hdC4uLiB3aGF0IEkgbWVhbiBieSBmYXN0YSBmb3JtYXQgaXMgdGhlIGluZm9ybWF0aW9uIGNvbnRhaW5lZCBpbiB0aGUgaGVhZGVyLiBTb21lIHByb2dyYW1zIHdpbGwgcmVxdWlyZSBhIHNwZWNpZmljIHNldCBvZiBpbmZvcm1hdGlvbiBpbiB0aGUgaGVhZGVyLCBob25lc3RseSBJIGRvbnQgcmVtZW1iZXIgZXhhY3RseSB3aGF0IGl0IGlzIGJ1dCB1c2luZyBweXRob24gaXQgc2hvdWxkbnQgYmUgaGFyZCB0byBkZWFsIHdpdGggdGhhdC4KCldvcmsgZmxvdyBzbyBmYXI6CgogIDEuIEV4dHJhY3QgRmFzdGEgZmlsZXMgKFNSQTogaHR0cHM6Ly90cmFjZS5uY2JpLm5sbS5uaWguZ292L1RyYWNlcy9zcmEvc3JhLmNnaT92aWV3PXRvb2xraXRfZG9jKQoKICAyLiBDb252ZXJ0IHRoZSBoZWFkZXIgZm9ybWF0IChQeXRob24sIHdlIHNob3VsZCB1c2UgYSBsaW5lIGJ5IGxpbmUgZm9ybWF0IHNvIHdlIHVzZSBhcyBsaXR0bGUgY29tcHV0YXRpb25hbCBwb3dlciBhcyBwb3NzaWJsZSwgd2hpY2ggaXMgaG93IEkgZGlkIG15IGFzc2lnbm1lbnQgZm9yIHRoZSBjb3Vyc2Ugc28gd2Ugd291bGQgaGF2ZSBhIHN0YXJ0aW5nIHBvaW50KQoKICAzLiBTdGFuZGFyZGl6ZSB0aGUgcXVhbGl0eSBvZiBvdXIgc2VxdWVuY2VzLi4uIHRoaXMgaXMgYSBzaW1wbGUgcGllY2Ugb2YgY29kZSBidXQgcXVpdGUgY29tcGxpY2F0ZWQgdGhlb3JldGljYWxseS4gV2hhdCBjaG9pY2VzIGRvIHdlIG1ha2U/IERvIHdlIGNob29zZSB0aGUgc3RhbmRhcmQ/IFNob3VsZCB3ZSBiZSBtb3JlIGRpZmZpY3VsdCBzaW5jZSB3ZXJlIGxvb2tpbmcgYXQgYSBsb3Qgb2Ygc291cmNlcz8gKipXZSBzaG91bGQgZGlzY3VzcyB0aGlzKiogCiAgClBsZWFzZSBiZWNvbWUgZmFtaWxpYXIgd2l0aCBUUklNTU9NQVRJQzogCgogIHdlYnNpdGU6IGh0dHA6Ly93d3cudXNhZGVsbGFiLm9yZy9jbXMvP3BhZ2U9dHJpbW1vbWF0aWMKICAKICBtYW51YWw6IGh0dHA6Ly93d3cudXNhZGVsbGFiLm9yZy9jbXMvdXBsb2Fkcy9zdXBwbGVtZW50YXJ5L1RyaW1tb21hdGljL1RyaW1tb21hdGljTWFudWFsX1YwLjMyLnBkZgoKICA0LiBRSUlNRSB0byBhc3NpZ24gT1RVIChodHRwczovL3FpaW1lMi5vcmcvKS4uLiBQUk9CTEVNOiBRSUlNRSBpcyBvbiB0aGUgY2x1c3RlciBub3QgUUlJTUUyLi4uIHdoYXQgc2hvdWxkIHdlIGRvPwogIAogIDUuIFBJQ1JVc3QgKGh0dHA6Ly9waWNydXN0LmdpdGh1Yi5pby9waWNydXN0LykKICAKICAKIyBNYXJjaCAybmQsIDIwMTggKGthdCkKCkplZmYgc2F5cyAiSSB3YXMgbG9va2luZyBhdCBFQkkgTWV0YWdlbm9taWNzIC8gRU5BIEV1cm9wZWFuIE51Y2xlb3RpZGUgQXJjaGl2ZSIKCisgR29vZCBwb2ludDogd2Ugd2lsbCBuZWVkIHRvIG1ha2Ugc3VyZSB0aGF0IHRoZSBzYW1wbGVzIHdlIHRha2UgZG9udCBvdmVyIGxhcC4KCioqQ0hBTkdFIElOIEtleXdvcmRzOiBlbmRvcGh5dGUsIDE2cyoqCgpUaGVuIHdlIHNlYXJjaCBmb3IgaWxsdW1pbmEuCgotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiMgRmViIDIyLCAyMDE4IChieSBIYW5uYSkKCldlIGFsbCBoYXZlIGEgZGF0YWJhc2UKCkthdDogcGljayBmcm9tIGxpc3Qgb2YgcmVwb3NpdG9yaWVzIChodHRwczovL3d3dy5uYXR1cmUuY29tL3NkYXRhL3BvbGljaWVzL3JlcG9zaXRvcmllcykKCkplZmY6IHBpY2sgZnJvbSBsaXN0IG9mIHJlcG9zaXRvcmllcyAoaHR0cHM6Ly93d3cubmF0dXJlLmNvbS9zZGF0YS9wb2xpY2llcy9yZXBvc2l0b3JpZXMpCgpCcm9keTogRHJ5YWQKCkhhbm5haDogU1JBIAoKCgoKICAKKipLZXl3b3JkczogZW5kb3BoeXRlLCBwbGFudHMsIGlsbHVtaW5hLCAxNnMqKgogCgoKCkRvd25sb2FkIGZhc3RhIGZpbGVzIGFuZCBwdXQgdGhlbSBvbiB0aGUgY2x1c3RlcjoKCiogRXZlcnkgZGF0YWJhc2UgaGFzIGEgZGlmZmVyZW50IGZvcm1hdAoKKiBJdCB3aWxsIGJlIGNvbmZ1c2luZwoKKiBIYXZlIHRvIGZpZ3VyZSBvdXQgd2hhdCB0aGV54oCZcmUgZ2l2aW5nIHlvdQoKICAgIGkuZS4gZWFjaCBpbmRpdmlkdWFsIG9yIGEgc2NyYW1ibGUgaW4gZWFjaCBmYXN0YSBmaWxlCgogICAgZG8gdGhleSBnaXZlIHBocmVkIHNjb3JlPyAKCiogQmV0dGVyIHRvIGdldCBxdWFsaXR5IHNjb3JlIGlmIHBvc3NpYmxlLCBidXQgd2UgY2FuIGNhbGN1bGF0ZQogCgoKCkluZm9ybWF0aW9uIHRvIGZpbmQgZm9yIGVhY2ggc2FtcGxlICoqKENvdWxkIHRyeSB0byBjb250YWN0IGF1dGhvcnMpKio6IAoKKiBsb2NhdGlvbiBvZiBzcGVjaWVzCgoqIFRyZWF0bWVudAoKKiBZZWFyIG9mIGV4cGVyaW1lbnQKCiogSWxsdW1pbmEgcGxhdGZvcm0KCiogTGlua2VkIHBhcGVyIGlmIHBvc3NpYmxlCgogIFdlIGNvdWxkIGluY2x1ZGUgdGhlIHR5cGUgb2YgYmFyY29kaW5nIGluIG91ciBhbmFseXNpcyAoY291bGQgYmlhcyBzZXF1ZW5jZSBhbmQgYWJ1bmRhbmNlIG9mIGlsbHVtaW5hIHNlcXVlbmNpbmcpLgogCjE2czoKCiogVXN1YWxseSBwZW9wbGUgbG9vayBmb3IgdjQKCiogVGFrZSBub3RlIG9mIHdoaWNoIGFyZWEgb2YgdGhlIDE2cyB0aGV5IGxvb2tlZCBhdAoKKiBBbHNvIHdoaWNoICoqc3BlY2lmaWMgYmFyY29kZSB0aGV5IHVzZWQqKgogCipHb2FsOiB0ZW4gc2FtcGxlcyBlYWNoIG1heCoKIAoKIApOb3RlcyBhYm91dCB0aGUgZmxvdyB0byBleHBlY3QgYWZ0ZXIgZGF0YSBtaW5pbmc6CgogIFNlbGVjdCBkYXRhCgogIFF1YWxpdHkgZmlsdGVyaW5nCgogIFFpaW1lIDIgYW5kIE9UVSBhc3NpZ25tZW50CgogIEZ1bmN0aW9uYWwgYXNzaWdubWVudCBpbiBwaWNydXN0IChLRUdHIG9ydGhvbG9neSBkYXRhYmFzZSkKICAKICBTdGF0aXN0aWNhbCBhbmFseXNpcyAobW9zdGx5IG11bHRpdmFyaWF0ZS4uLiBJIHJlY29tbWVuZCB5b3UgZ2V0IGZhbWlsaWFyIHdpdGggTnVtZXJpY2FsIEVjb2xvZ3kgaW4gUikK</div>
 
 
 
