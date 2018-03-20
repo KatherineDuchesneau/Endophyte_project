@@ -9,6 +9,26 @@ output:
     theme: cerulean
     toc: yes
 ---
+
+# March 20th, 2018 (Hannah)
+
+```
+#!/bin/bash
+#SBATCH -c 12
+#SBATCH --time=1-10:00:00
+#SBATCH --job-name=SRA_2
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=h_driver23@hotmail.com
+#SBATCH --error=SRA_2.err
+
+cd "/global/home/sa104006/fastq/SRA2/"
+for ((i = 32; i<= 55; i++)); do "/global/home/sa104006/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0" --accession SRX25019$i$; done
+
+
+```
+
+
+
 # March 14th, 2018 (Brody)
 
 Brody's keyword searches:
