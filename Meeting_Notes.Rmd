@@ -99,7 +99,7 @@ Project Numbers:
 - PRJNA381586 
 - PRJNA310879
 - PRJNA327111
-- PRJNA327111 *NOTE BY KAT: You have a repeat?*
+- PRJNA327111 **NOTE BY KAT: Why do you have a repeat?**
 
 
 # March 20th, 2018 (Hannah)
