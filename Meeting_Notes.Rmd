@@ -21,53 +21,74 @@ Project Numbers found in the last third of the SRA database search:
   *have barcodes.
   
 - PRJNA325438: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP078033
+
   Orchid Phalenopsis
+  
   1 sample
+  
   Submitted by Kerala Agricultural University in Thrissur, India. 
+  
   Illumina MiSeq 
+  
   locus tag: BAU12
+  
   *Don't seem to have barcodes.
 
 - PRJNA307272: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP067933
+
   Pinus flexilis
+  
   7 samples
+  
   Submitted by University of California in Merced, USA
+  
   Illumina MiSeq
+  
   *Don't seem to have barcodes.
  
 - PRJEB7842: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=ERP008816
+
   Populus balsamifera
+  
   150 samples
+  
   Canada	lat:50.52	long:-103.64
+  
   Illumina MiSeq
+  
   *Title could be decyphered with work
   
 - PRJEB7137:https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJEB7137&go=go
+
   Phelipanche aegyptiaca (parasitic plant) AND Solanum lycopersicum (host)
+  
   9 samples (5/4)
+  
   Submitted by Newe Ya'ar Agricultural Research Organization in Israel
+  
   Illumina MiSeq
+  
   *have barcodes.
   
 - PRJNA288708 :https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP060388
+
   Espeletia
-  2 samples (Young and Old) + 2 samples total bacteria... 
+  
+  2 samples (Young and Old) + 2 samples total bacteria...
+  
   El Coquito, Santa Marta, Magdalena, Colombia
+  
   Illumina MiSeq
+  
   *Don't seem to have barcodes.
   
 Raw list:
 
 - PRJNA343586
-
 - PRJNA325438
-
 - PRJNA307272
-
 - PRJEB7842
-
 - PRJEB7137
-
 - PRJNA288708
 
 
