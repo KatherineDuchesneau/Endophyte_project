@@ -9,6 +9,23 @@ output:
     theme: cerulean
     toc: yes
 ---
+# March 22nd, 2018 (Brody)
+
+### Poster titles
+
+If we don't like any of these, please suggest another title!
+
+"A meta-analysis of the functional diversity of endophytes"
+
+"Does host plant species predict associations with functional endophyte communities?"
+
+"Do plant species associate with endophyte communities according to function?"
+
+"Plant hosts and the specificity of endophyte functional groups: A meta-analysis"
+
+
+
+
 # March 21st, 2018 (Katherine)
 
 Project Numbers found in the last third of the SRA database search:
