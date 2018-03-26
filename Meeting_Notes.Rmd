@@ -16,6 +16,52 @@ Katherine cluster info:
 ssh sa104007@login.cac.queensu.ca
 Leo1618Wednesday
 
+
++ PREVIOUS PROJECT READS
+
+ - PRJNA288893:
+ 
+ Aloe vera (Aloe)
+ 
+ 4 samples
+ 
+ Illumina MiSeq
+ 
+ Malaysia: Selangor,Sungai Buloh
+ 
+ 
+ -PRJNA354831:https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP093862
+ 
+ Zea mays (maize)
+ 
+ 39 N 116 E
+ 
+ Illumina HiSeq 2500
+ 
+ 4 (2 high p/ 2 low p)
+ 
+ 
+ -PRJNA360379:https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRX2527833&go=go
+ 
+ Oryza sativa (rice) 
+ 
+ 22.57 N 88.36 E
+ 
+ Illumina HiSeq 1000
+ 
+ 2 samples
+
+
+ -PRJNA343393:https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRX2184768&go=go
+ 
+ Paeonia suffruticosa (tree peony) 
+ 
+ Illumina MiSeq
+ 
+ China:Luoyang National Peony Garden
+ 
+ 
+
 # March 22nd, 2018 (Brody)
 
 ### Poster titles
