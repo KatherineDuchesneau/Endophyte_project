@@ -1,0 +1,66 @@
+#!/bin/bash
+#SBATCH -c 12
+#SBATCH --time=1-10:00:00
+#SBATCH --job-name=SRA_2
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=h_driver23@hotmail.com
+#SBATCH --error=SRA_2.err
+
+cd /global/home/sa104007/EndophytePRJ/Chladophora
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2311709
+
+cd ../Cratoneuron
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2311687
+
+cd ../Pylaisiella
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2310447
+
+cd ../Bryum
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2310445
+
+cd ../Grimmia
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2269390
+
+cd ../Aloe
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRR2204709	
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRR2204707
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRR2204344	
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRR2204159
+
+cd ../Aloe
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2310747
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2310447
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2310446	
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2310445
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2269390
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2230043
+
+cd ../Zea
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2373380
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2372945
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2372829		
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2372816
+
+cd ../Oryza
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRR5211361
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRR5211360
+
+cd ../Paeonia_suffruticosa
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2184768	
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2184766
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2184764	
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2184762
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2184761
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2184759
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2178257	
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2178255
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2178253
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2177703
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2177702	
+
+cd ../Paeonia_rockii
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2184767	
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2184763
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2178254	
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2176861
+
