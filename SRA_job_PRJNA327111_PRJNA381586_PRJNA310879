@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH -c 12
+#SBATCH --time=1-10:00:00
+#SBATCH --job-name=SRA_Hannah
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=h_driver23@hotmail.com
+#SBATCH --error=SRA_Hannah.err
+
+cd /global/home/sa104007/EndophytePRJ/Pinus
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896457
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896455
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896454
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896453
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896452
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896448
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896442
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896430
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896421
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896417
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1896411
+/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX1883355
+
+cd ../Brassica_napus
+for ((i = 653; i<= 700; i++)); do "/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX2729$i; done
+
+cd ../Brassica_oleracea
+for ((i = 32; i<= 55; i++)); do "/global/home/sa104007/SRA/sratoolkit.2.9.0-ubuntu64/bin/fastq-dump.2.9.0 --accession SRX25019$i; done
