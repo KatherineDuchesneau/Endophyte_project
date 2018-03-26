@@ -114,8 +114,14 @@ Raw list:
 Project Numbers:
 
 - PRJNA381586 
+  - Rapeseed (Impact of dibutyl phthalate (DBP) on properties and bacteria community of soil and oil rape)
+  
 - PRJNA310879
+  - Brassica oleracea
+  
 - PRJNA327111
+  - Pinus Pinaster (analyzed the effects of the invasion of Bursaphelenchus xylophilus, the major pathogen causing pine wilt disease (PWD), on the endophytic microbiome of adult P. pinaster trees
+  
 - PRJNA327111 **NOTE BY KAT: Why do you have a repeat?**
 
 
