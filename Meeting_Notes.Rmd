@@ -9,6 +9,12 @@ output:
     theme: cerulean
     toc: yes
 ---
+# March 27th, 2018 (Brody)
+
+Added folder in group endophyte project folder titled "Quercus" which contains fasta files from the dataset I retrieved from DRYAD.
+
+
+
 # March 26th, 2018 (Kat)
 
 Katherine cluster info:
