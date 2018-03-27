@@ -81,8 +81,42 @@ fastq-dump --accession SRR3742177
 fastq-dump --accession SRR3742176
 fastq-dump --accession SRR3742138
 
+cd ../Orchid
+fastq-dump --accession SRR3747548
+
+cd ../Pinus_flexilis
+fastq-dump --accession SRR3073559
+fastq-dump --accession SRR3073558
+fastq-dump --accession SRR3073557
+fastq-dump --accession SRR3073556
+fastq-dump --accession SRR3073555
+fastq-dump --accession SRR3073554
+fastq-dump --accession SRR3073553
+
+cd ../Solanum
+fastq-dump --accession ERR632221
+fastq-dump --accession ERR632220
+fastq-dump --accession ERR632219
+fastq-dump --accession ERR632218
+fastq-dump --accession ERR632209
+fastq-dump --accession ERR632208
+fastq-dump --accession ERR632207
+fastq-dump --accession ERR631092
+fastq-dump --accession ERR592858
+
+cd ../Espeletia
+fastq-dump --accession SRR2087835
+fastq-dump --accession SRR2087834
+fastq-dump --accession SRR2087833
+fastq-dump --accession SRR2087832
+fastq-dump --accession SRR2087831
+fastq-dump --accession SRR2087830
+
 cd ../Brassica_napus
 for ((i = 51; i<= 98; i++)); do fastq-dump --accession SRR54397$i; done
 
 cd ../Brassica_oleracea
 for ((i = 24; i<= 47; i++)); do fastq-dump --accession SRR51859$i; done
+
+cd ../Populus
+for ((i = 756; i<= 805; i++)); do fastq-dump --accession ERR688$i; done
