@@ -13,19 +13,19 @@ Experiment species name: city, country (latitude and longitude coordinates)
 
 +other infor from the paper that might be useful
 
-#DATA
+# DATA
 
 - Paeonia_suffruticosa: 34°43′N	112°24′E
 
 - Paeonia_rockii: 34°43′N	112°24′E
 
- # V3-V4 hypervariable region of the bacterial 16S rRNA gene amplified using Bac 341f (5′-CCTACACGACGCTCTTCCGATCTN-3′) and Univ 805r (5′-GACTGGAGT TCCTTGGCACCCGAGAATTCCA-3′) primers
+   V3-V4 hypervariable region of the bacterial 16S rRNA gene amplified using Bac 341f (5′-CCTACACGACGCTCTTCCGATCTN-3′) and Univ 805r (5′-GACTGGAGT TCCTTGGCACCCGAGAATTCCA-3′) primers
 
- # each file is an individual sample. Note they are all diff cultivars of the same species!
+   each file is an individual sample. Note they are all diff cultivars of the same species!
 
 - Oryza sativa: Kolkata, India (22.5726° N, 88.3639° E)
   
- # V3-V4 hyper-variable region [V3 Forward Oligo: CCTACGGGNBGCASCAG and V4 Reverse Oligo: GACTACNVGGGTATCTAATCC] of 16S rDNA gene of bacteria and Archaea were used
+   V3-V4 hyper-variable region [V3 Forward Oligo: CCTACGGGNBGCASCAG and V4 Reverse Oligo: GACTACNVGGGTATCTAATCC] of 16S rDNA gene of bacteria and Archaea were used
  
 - Chladophora: Beijin, China (40°29′9″N - 40°33′35″N)
 
@@ -39,11 +39,11 @@ Experiment species name: city, country (latitude and longitude coordinates)
 
 - Aloe: 3.235283 N, 101.568342 E
 
- # V3–V4 conserved regions of 16S rRNA gene sequences in triplicate [31,22] using the 16S rRNA gene primers (forward primer 5ʹ-CCTACGGGNGGCWGCAG-3ʹ and reverse 5ʹ-GACTACHVGGGTATCTA-3ʹ)
+   V3–V4 conserved regions of 16S rRNA gene sequences in triplicate [31,22] using the 16S rRNA gene primers (forward primer 5ʹ-CCTACGGGNGGCWGCAG-3ʹ and reverse 5ʹ-GACTACHVGGGTATCTA-3ʹ)
 
 - Zea: 39 N 116 E
 
- # Some have high P some have low P. Consider this when you interpret results! 
+   Some have high P some have low P. Consider this when you interpret results! 
 
 
 
