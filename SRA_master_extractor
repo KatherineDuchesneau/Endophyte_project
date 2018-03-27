@@ -66,3 +66,23 @@ fastq-dump --accession SRR4289219
 fastq-dump --accession SRR4289223
 fastq-dump --accession SRR4267986	
 fastq-dump --accession SRR4263477
+
+cd ../Pinus
+fastq-dump --accession SRR3742197
+fastq-dump --accession SRR3742194
+fastq-dump --accession SRR3742193
+fastq-dump --accession SRR3742191
+fastq-dump --accession SRR3742190
+fastq-dump --accession SRR3742184
+fastq-dump --accession SRR3742182
+fastq-dump --accession SRR3742180
+fastq-dump --accession SRR3742179
+fastq-dump --accession SRR3742177
+fastq-dump --accession SRR3742176
+fastq-dump --accession SRR3742138
+
+cd ../Brassica_napus
+for ((i = 51; i<= 98; i++)); do fastq-dump --accession SRR54397$i; done
+
+cd ../Brassica_oleracea
+for ((i = 24; i<= 47; i++)); do fastq-dump --accession SRR51859$i; done
