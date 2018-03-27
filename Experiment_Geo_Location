@@ -1,0 +1,30 @@
+In this file please write:
+
+Experiment species name: latitude and longitude coordinates
+
++other infor from the paper that might be useful
+
+The Exp. Species name refers to the name of the file as seen in the SRA file extractor master. 
+
+If the specific longitude and latitude of the experiment are not available, please write the name of the city and country where the data was produced and the lat and long of that city in brackets.
+EX: 
+
+Experiment species name: city, country (latitude and longitude coordinates)
+
++other infor from the paper that might be useful
+
+############################################ DATA #######################################################
+
+- Paeonia_suffruticosa: 34°43′N	112°24′E
+
+- Paeonia_rockii: 34°43′N	112°24′E
+
+ # V3-V4 hypervariable region of the bacterial 16S rRNA gene amplified using Bac 341f (5′-CCTACACGACGCTCTTCCGATCTN-3′) and Univ 805r (5′-GACTGGAGT TCCTTGGCACCCGAGAATTCCA-3′) primers
+
+ # each file is an individual sample. Note they are all diff cultivars of the same species!
+
+- Oryza sativa: Kolkata, India (22.5726° N, 88.3639° E)
+  
+ # V3-V4 hyper-variable region [V3 Forward Oligo: CCTACGGGNBGCASCAG and V4 Reverse Oligo: GACTACNVGGGTATCTAATCC] of 16S rDNA gene of bacteria and Archaea were used
+ 
+ 
