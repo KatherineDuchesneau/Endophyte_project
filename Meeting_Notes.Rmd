@@ -41,7 +41,7 @@ Leo1618Wednesday
  4 (2 high p/ 2 low p)
  
  
- -PRJNA360379:https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRX2527833&go=go
+ -PRJNA360379:https://www.sciencedirect.com/science/article/pii/S2213596017300314
  
  Oryza sativa (rice) 
  
@@ -52,7 +52,7 @@ Leo1618Wednesday
  2 samples
 
 
- -PRJNA343393:https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRX2184768&go=go
+ -PRJNA343393:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5628320/
  
  Paeonia suffruticosa (tree peony) 
  
