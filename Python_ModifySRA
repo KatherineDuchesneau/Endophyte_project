@@ -1,14 +1,15 @@
 import os
-os.chdir("/Users/katherineduchesneau/Queens/Classes/Semester_4/Bio812_bioinf/Python_assignment") 
+os.chdir("/global/home/sa104007/EndophytePRJ") 
 # setting my working directory to facilitate pulling files in
 
 import re
 # importing the regex library
 
-with open ("./gene.gb", 'r' ) as ifp: #using the gene.gb, read in
+with open ("./*.fastq", 'r' ) as ifp: #WE NEED TO FIND A WAY TO RUN THROUGH ALL OUR SRA?
     with open("output.txt", "w") as ofp: #and then write in file output.txt (call it ofp)
         for line in ifp: # each line (call it line)
-            if re.search(r'DEFINITION',line): # if you find a line that starts with DEFINITION
+            if re.search(r'@',line): # if you find a line that starts with @
+-----------------------------------------------------------------------------------------------------------------
                 ofp.write(re.sub(r'[A-Z]+\s\s(.+)\n', '\\1',line)) # select only the portion after the space until the end of line
             if re.search(r'\s\s\s\s\s\s\s\s\s\s\s\s[a-z]',line): # if you find a line that starts with a lot of spaces
                   ofp.write(re.sub(r'\s\s\s\s\s\s\s\s\s\s\s\s(.+)\n', '\\1',line)) # select it (in case the definition is multiline... if there are mistakes they will be taken care of later)             
