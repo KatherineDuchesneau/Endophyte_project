@@ -57,7 +57,11 @@ Experiment species name: city, country (latitude and longitude coordinates)
 
 - Pinus: Coimbra, Portugal (40.2033° N, 8.4103° W)
 
+- Pinus_flexilis: Niwot Ridge, CO (no coordinates given)
 
+- Solanum: La Plata, Argentina (34°56’43.7”S, 58°08’00.9”W)
+
+- Espeletia: Natural National Park Los Nevados, Colombia (04°52’27”N, 75°15’51.4”W)
 
 
 
