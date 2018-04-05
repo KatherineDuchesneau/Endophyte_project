@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH -c 12
 #SBATCH --time=1-10:00:00
-#SBATCH --job-name=SRA_2
+#SBATCH --job-name=Trimmomatic
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=h_driver23@hotmail.com
-#SBATCH --error=SRA_2.err
+#SBATCH --error=Trimmomatic_2.err
 
 module load trimmomatic
 
