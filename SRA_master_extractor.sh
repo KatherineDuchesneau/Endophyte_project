@@ -11,6 +11,15 @@ module load sra-toolkit
 cd /global/home/sa104007/EndophytePRJ/Chladophora
 fastq-dump --gzip --split-files --accession SRR4734837
 
+cd ../Brassica_napus
+for ((i = 51; i<= 98; i++)); do fastq-dump --gzip --split-files --accession SRR54397$i; done
+
+cd ../Brassica_oleracea
+for ((i = 24; i<= 47; i++)); do fastq-dump --gzip --split-files --accession SRR51859$i; done
+
+cd ../Populus
+for ((i = 756; i<= 805; i++)); do fastq-dump --gzip --split-files --accession ERR688$i; done
+
 cd ../Cratoneuron
 fastq-dump --gzip --split-files --accession SRR4734815
 
@@ -112,15 +121,6 @@ fastq-dump --gzip --split-files --accession SRR2087833
 fastq-dump --gzip --split-files --accession SRR2087832
 fastq-dump --gzip --split-files --accession SRR2087831
 fastq-dump --gzip --split-files --accession SRR2087830
-
-cd ../Brassica_napus
-for ((i = 51; i<= 98; i++)); do fastq-dump --gzip --split-files --accession SRR54397$i; done
-
-cd ../Brassica_oleracea
-for ((i = 24; i<= 47; i++)); do fastq-dump --gzip --split-files --accession SRR51859$i; done
-
-cd ../Populus
-for ((i = 756; i<= 805; i++)); do fastq-dump --gzip --split-files --accession ERR688$i; done
 
 cd ../Vitis  
 fastq-dump --gzip --split-files --accession SRR4010872
