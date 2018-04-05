@@ -69,7 +69,7 @@ Experiment species name: city, country (latitude and longitude coordinates)
 
 
 
-
-- kiwi fruit = currently NO FILES
-- fynbos = currently NO FILES
+************************************************************************************
+- kiwi fruit = currently <b> NO FILES </b>
+- fynbos = currently <b> NO FILES </b>
 
