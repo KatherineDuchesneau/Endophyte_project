@@ -45,12 +45,6 @@ Experiment species name: city, country (latitude and longitude coordinates)
 
    Some have high P some have low P. Consider this when you interpret results! 
 
-- Quercus: Tennessee (36° 06' 11.3" N - 85° 50' 4.9" W), North Carolina (NC2)(35.722603 - -80.394309), North Carolina (NC3)(35° 48' 11.1" N - 80° 33' 25.0" W)
-
-   Three species in dataset - Quercus phellos, Pinus taeda, & Populus deltoides
-   
-   Experimental design - sterile seedlings of each species planted in soil collected from each of three locations to see if endophyte      communities that colonize each seedling are consistent with the soil type
-
 - Brassica_napus: Beijing, China (39.9042° N, 116.4074° E)
 
 - Brassica_oleracea: Kentucky, USA (37.8393° N, 84.2700° W)
