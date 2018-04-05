@@ -1,0 +1,15 @@
+FASTQ=glob_wildcards('*/{SRA}.fastq')
+
+DATS = expand('*/{Files}', Files={FASTQ}.fastq)
+
+rule sra_illumina:
+        input: */{SRA}.fastq
+        output: 'results.txt'
+        shell: 'python ModifySRAtoILLUMINA.py {input} > {output}'
+
+rule clean:
+        shell: '''
+                rm -rf */*.fasta
+                rm -f *.fasta               
+                '''
+   
