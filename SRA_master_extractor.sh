@@ -40,7 +40,7 @@ mkdir ../Grimmia
 cd ../Grimmia
 fastq-dump --gzip --split-files --accession SRR4453815
 
-mkdir Aloe
+mkdir ../Aloe
 cd ../Aloe
 fastq-dump --gzip --split-files --accession SRR2204709	
 fastq-dump --gzip --split-files --accession SRR2204707
