@@ -72,4 +72,5 @@ Experiment species name: city, country (latitude and longitude coordinates)
 ************************************************************************************
 - kiwi fruit = currently <b> NO FILES </b>
 - fynbos = currently <b> NO FILES </b>
+- Quercus = <b> FASTA?? Weird Format </b>
 
