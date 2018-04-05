@@ -12,7 +12,7 @@ mkdir Chladophora
 cd /global/home/sa104007/EndophytePRJ/Chladophora
 fastq-dump --gzip --split-files --accession SRR4734837
 
-mkdir Brassica_napus
+mkdir ../Brassica_napus
 cd ../Brassica_napus
 for ((i = 51; i<= 98; i++)); do fastq-dump --gzip --split-files --accession SRR54397$i; done
 
