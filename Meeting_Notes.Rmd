@@ -9,6 +9,11 @@ output:
     theme: cerulean
     toc: yes
 ---
+# April 5th, 2018 (Brody)
+
+Updated "data sources" spreadsheet with correct species for Pinus_flexilis - this dataset includes both Pinus flexilis and Picea engelmanni
+
+
 # March 27th, 2018 (Brody)
 
 Added folder in group endophyte project folder titled "Quercus" which contains fasta files from the dataset I retrieved from DRYAD.
