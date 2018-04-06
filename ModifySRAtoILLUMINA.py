@@ -3,6 +3,7 @@
 import sys
 inFile = sys.argv[1]
 outFile = sys.argv[2]
+#input into the console: Python ModifySRAtoILLUMINA.py input_name.fastq output_name.fasta
 
 import re
 # importing the regex library
