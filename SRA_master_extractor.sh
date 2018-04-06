@@ -158,3 +158,5 @@ for ((i = 63; i<= 71; i++)); do fastq-dump --gzip --split-files --accession ERR1
 mkdir ../Rothmannia
 cd ../Rothmannia
 for ((i = 75; i<= 83; i++)); do fastq-dump --gzip --split-files --accession ERR17451$i; done
+
+rm */*_2.fastq.gz
