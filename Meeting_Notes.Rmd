@@ -11,8 +11,10 @@ output:
 ---
 # April 6th, 2018 (Brody)
 
-Wrote and ran script to count number of fastq files in each data folder
+Wrote and ran script to count number of fastq files in each data folder - posted script to Github
+
 Continuously writing meta_data.csv file, here are the columns so far:
+
 project_id | folder | found_by | number_samples | host_species | lat | long | location | date | source | data_link | paper_link | barcodes | lab_or_field_collection
 
 
