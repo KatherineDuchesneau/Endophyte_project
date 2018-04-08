@@ -1,15 +1,29 @@
-FASTQ=glob_wildcards('*/{SRA}.fastq')
+rule all:
+    input:
+        expand("{sp}/*.fasta", sp=['Aloe', 'Cratoneuron', 'Orchid'])
 
-DATS = expand('*/{Files}', Files={FASTQ}.fastq)
-
-rule sra_illumina:
-        input: */{SRA}.fastq
-        output: 'results.txt'
+rule FASTA:
+        input: '*/{file}.fastq'
+        output: '*/{file}.fasta'
         shell: 'python ModifySRAtoILLUMINA.py {input} > {output}'
 
-rule clean:
-        shell: '''
-                rm -rf */*.fasta
-                rm -f *.fasta               
-                '''
-   
+rule Cratoneuron:
+        input: 'Cratoneuron/{file}.fastq'
+        output: 'Cratoneuron/{file}.fasta'
+        shell: 'python ModifySRAtoILLUMINA.py {input} > {output}'
+
+rule Orchid:
+        input: 'Orchid/{file}.fastq'
+        output: 'Orchid/{file}.fasta'
+        shell: 'python ModifySRAtoILLUMINA.py {input} > {output}'
+
+rule Pinus_flexilis:
+        input: 'Pinus_flexilis/{file}.fastq'
+        output: 'Pinus_flexilis/{file}.fasta'
+        shell: 'python ModifySRAtoILLUMINA.py {input} > {output}'
+
+rule Vitis:
+        input: 'Vitis/{file}.fastq'
+        output: 'Vitis/{file}.fasta'
+        shell: 'python ModifySRAtoILLUMINA.py {input} > {output}'
+
