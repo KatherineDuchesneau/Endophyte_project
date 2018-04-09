@@ -16,4 +16,4 @@ with open (inFile, 'r' ) as ifp: #WE NEED TO FIND A WAY TO RUN THROUGH ALL OUR S
                   ofp.write(re.sub(r'([A,T,G,C]+)', '\\1',line)) # select it (in case the definition is multiline... if there are mistakes they will be taken care of later)             )
             else:
                 ofp.write('') # delete everything else
-                
+outFile.close()                
