@@ -9,6 +9,18 @@ output:
     theme: cerulean
     toc: yes
 ---
+# April 9th, 2018 (Hannah)
+
+- Fixed trimmomatic script
+- Fixed SRAtoILLUMINA.py script
+- Ran trimmomatic_job - some errors *see Trimmomatic_3.err*
+- Wrote Gunzip.sh script
+
+We need to identify trimmomatic errors, then run Gunzip.sh to decompress all files, and then run QIIME
+
+Note: I decompressed Pylaisiella files in the command line to check the script (so they are unzipped)
+
+
 # April 6th, 2018 (Brody)
 
 Wrote and ran script to count number of fastq files in each data folder - posted script to Github
