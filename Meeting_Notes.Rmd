@@ -9,6 +9,18 @@ output:
     theme: cerulean
     toc: yes
 ---
+# April 10th, 2018 (Brody)
+
+Combined scripts for fastqdump, trimmomatic, and fasta standardization into one single script - FULLJOB.sh
+
+Uploaded metadata_apr_9.csv to Github
+
+- data still missing
+ | barcodes (write if present or not) | paper link | # samples |
+ 
+ There are also several datasets for which I have not found any metadata
+
+
 # April 9th, 2018 (Hannah)
 
 - Fixed Trimmomatic errors and resubmitted script
