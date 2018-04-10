@@ -16,7 +16,7 @@ output:
 - Ran trimmomatic_job - some errors *see Trimmomatic_3.err*
 - Wrote Gunzip.sh script
 
-We need to identify trimmomatic errors, then run Gunzip.sh to decompress all files, and then run QIIME
+We need to identify trimmomatic errors, then run Gunzip.sh to decompress all files, then convert all files to .fasta format, and then run QIIME
 
 Note: I decompressed Pylaisiella files in the command line to check the script (so they are unzipped)
 
