@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -c 12
+#SBATCH -c 4
 #SBATCH --time=1-10:00:00
 #SBATCH --job-name=SRA_2
 #SBATCH --mail-type=ALL
