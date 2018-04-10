@@ -1,4 +1,5 @@
 module load anaconda
+module load qiime
 source activate qiime1
 
 #make OTUs and tree
