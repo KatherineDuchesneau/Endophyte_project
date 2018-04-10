@@ -11,6 +11,13 @@ output:
 ---
 # April 9th, 2018 (Hannah)
 
+- Fixed Trimmomatic errors and resubmitted script
+
+Next Steps: convert fastq files to fasta, then use QIIME
+
+
+# April 9th, 2018 (Hannah)
+
 - Fixed trimmomatic script
 - Fixed SRAtoILLUMINA.py script
 - Ran trimmomatic_job - some errors *see Trimmomatic_3.err*
