@@ -6,12 +6,16 @@
 #SBATCH --mail-user=h_driver23@hotmail.com
 #SBATCH --error=SRA_2.err
 
+# load sra-toolkit which allows the designated reads to be downloaded from the SRA database
 module load sra-toolkit
 
+# Make directories for each species identified using our keywords in the SRA database
+# Enter the specified directory to download fastq files from the SRA database associated with that species using fastq-dump
 mkdir Chladophora
 cd /global/home/sa104007/EndophytePRJ/Chladophora
 fastq-dump --gzip --split-files --accession SRR4734837
 
+# use a for loop to download fastq files for samples in the SRA database that have consecutive SRR IDs
 mkdir ../Brassica_napus
 cd ../Brassica_napus
 for ((i = 51; i<= 98; i++)); do fastq-dump --gzip --split-files --accession SRR54397$i; done
@@ -159,4 +163,5 @@ mkdir ../Rothmannia
 cd ../Rothmannia
 for ((i = 75; i<= 83; i++)); do fastq-dump --gzip --split-files --accession ERR17451$i; done
 
+# remove reverse reads
 rm */*_2.fastq.gz
