@@ -6,8 +6,10 @@
 #SBATCH --mail-user=h_driver23@hotmail.com
 #SBATCH --error=Trimmomatic_error.err
 
+# load trimmomatic to trim fastq files and remove adapters
 module load trimmomatic
 
+# use for loops to employ trimmomatic functions on all fastq files in each of the species directories
 for file in ./Zea/*.fastq; do java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar SE -phred33 ./$file ILLUMINACLIP:TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36; done
 
 for file in ./Vitis/*.fastq; do java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar SE -phred33 ./$file ILLUMINACLIP:TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36; done
