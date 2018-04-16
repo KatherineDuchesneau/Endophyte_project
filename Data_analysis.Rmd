@@ -1,0 +1,120 @@
+---
+title: "Working with the data"
+output: html_notebook
+---
+#Housekeeping
+
+```{r Load Packages, include=FALSE}
+library(readr)
+library(tidyverse)
+library(lme4)
+library(MASS)
+library(MuMIn)
+library(vegan)
+library(fitdistrplus)
+library(car)
+library(bbmle)
+library(arm)
+library(corrplot)
+library(ade4)
+library(lmtest)
+library(phyloseq)
+```
+
+```{r Housekeeping, include=FALSE}
+# Simplified, clean plotting theme
+theme_simple <- function (base_size = 16, base_family = "") {
+  theme_classic(base_size = base_size, base_family = base_family) %+replace%
+    theme(
+      axis.text = element_text(colour = "black"),
+      axis.title.x = element_text(size=18),
+      axis.text.x = element_text(size=16, face= "italic"),
+      axis.title.y = element_text(size=18, angle=90), 
+      axis.text.y = element_text(size=16),
+      axis.ticks = element_blank(),
+      panel.background = element_rect(fill="white"),
+      panel.border = element_blank(),
+      plot.title=element_text(face="bold", size=20),
+      legend.position="none"
+    )
+}
+
+overdisp_fun <- function(model) {
+  ## number of variance parameters in an n-by-n variance-covariance matrix
+  vpars <- function(m) {
+    nrow(m) * (nrow(m) + 1)/2
+  }
+  # The next two lines calculate the residual degrees of freedom
+  model.df <- sum(sapply(VarCorr(model), vpars)) + length(fixef(model))
+  rdf <- nrow(model.frame(model)) - model.df
+  # extracts the Pearson residuals
+  rp <- residuals(model, type = "pearson")
+  Pearson.chisq <- sum(rp^2)
+  prat <- Pearson.chisq/rdf
+  # Generates a p-value. If less than 0.05, the data are overdispersed.
+  pval <- pchisq(Pearson.chisq, df = rdf, lower.tail = FALSE)
+  c(chisq = Pearson.chisq, ratio = prat, rdf = rdf, p = pval)
+}
+
+residfit <- function (model, col="black") {
+  f<-fitted(model)
+  r<-resid(model, type='pearson')
+  plot(f, r, col=col, main='Residuals vs. Fitted')
+  L1<-loess(r~f)
+  fvec = seq(min(f),max(f),length.out=1000)
+  lines(fvec,predict(L1,fvec),col='red')
+}
+
+scaleloc <- function(model,col="black") {
+  f <- fitted(model)
+  r <- sqrt(abs(residuals(model, type='pearson'))) #transformed pearson residuals
+  plot(f,r,col=col, main='Scale-Location Plot') 
+  L1 <- loess(r~f)
+  fvec = seq(min(f),max(f),length.out=1000)
+  lines(fvec,predict(L1,fvec),col=2)
+}
+```
+
+# Loading in data
+
+```{r Loading data, include=FALSE}
+BioDatFull2 <- read.csv("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/BioDatFull2.csv")
+mapping_file <- read.csv("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/mapping_file.csv")
+
+
+metagenome_predictions <- read.delim("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/metagenome_predictions.txt")
+head(metagenome_predictions)
+
+ny <- as.characher(metagenome_predictions$KEGG_Description)
+OTU<-metagenome_predictions$OTU.ID
+metagenome_predictions<-metagenome_predictions[,c(-1,-length(metagenome_predictions))]
+Samples <- colnames(metagenome_predictions)
+metagenome_predictions<-data.frame(t(metagenome_predictions))
+colnames(metagenome_predictions) <- ny
+
+
+OTU_table<-read.delim("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/97_OTU.txt")
+head(OTU_table)
+nx<-OTU_table$OTU.ID
+OTU_table<-OTU_table[,-c(1,length(OTU_table))]
+OTU_table<-data.frame(t(OTU_table))
+colnames(OTU_table)<-nx
+```
+
+# OTU
+## ANALYSIS
+
+```{r}
+OTU.info<-data.frame(Sample=Samples, Alpha.div=rep(NA, length(Samples)),Taxonomy=rep(NA, length(Samples)), Function.Alpha.div=rep(NA, length(Samples)), Species=rep(NA, length(Samples)))
+
+
+
+
+
+
+```
+
+
+
+
+
