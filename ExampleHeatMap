@@ -1,0 +1,22 @@
+# Example Heat Map
+
+House1<-c('Gryffindor','Gryffindor','Gryffindor','Gryffindor','Gryffindor','Slytherin','Slytherin','Slytherin','Slytherin','Ravenclaw','Ravenclaw','Ravenclaw','Hufflepuff','Hufflepuff','Muggle')
+House2<-c('Gryffindor','Slytherin','Ravenclaw','Hufflepuff','Muggle','Slytherin','Ravenclaw','Hufflepuff','Muggle','Ravenclaw','Hufflepuff','Muggle','Hufflepuff','Muggle','Muggle')
+Fst<-c(0,0.062,0.029,0.042,0.087,0,0.044,0.07,0.049,0,0.037,0.095,0,0.091,0)
+
+NewData<-data.frame(House1,House2,Fst)
+
+library(ggplot2)
+
+
+NewData$House1<-factor(NewData$House1, c("Gryffindor","Slytherin","Ravenclaw","Hufflepuff","Muggle"))
+
+NewData$House2<-factor(NewData$House2, c("Gryffindor","Slytherin","Ravenclaw","Hufflepuff","Muggle"))
+
+
+
+ggplot(NewData,aes(House2,House1))+
+  geom_tile(aes(fill=Fst),colour="black",size=0.75,stat="identity") + 
+  scale_fill_gradient(low="purple",high="blue")+
+  xlab("")+ylab("")+
+  theme(legend.title.align=0.85,legend.title=element_text(face="bold"),axis.text=element_text(face="bold",colour="black",size=11),panel.grid=element_blank(),panel.background = element_blank())
