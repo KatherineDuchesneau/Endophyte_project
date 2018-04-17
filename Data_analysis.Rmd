@@ -14,11 +14,13 @@ library(vegan)
 library(fitdistrplus)
 library(car)
 library(bbmle)
-library(arm)
-library(corrplot)
+library(lattice)
+library(permute)
 library(ade4)
 library(lmtest)
 library(phyloseq)
+library(RAM)
+library("BiodiversityR")
 ```
 
 ```{r Housekeeping, include=FALSE}
@@ -79,38 +81,81 @@ scaleloc <- function(model,col="black") {
 
 ```{r Loading data, include=FALSE}
 BioDatFull2 <- read.csv("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/BioDatFull2.csv")
-mapping_file <- read.csv("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/mapping_file.csv")
+colnames(BioDatFull2)[colnames(BioDatFull2)=="Plant"] <- "Species"
 
+mapping_file <- read.csv("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/mapping_file.csv")
+mapping_file$SampleID<-as.character(mapping_file$SampleID)
+mapping_file$Species<-as.character(mapping_file$Species)
 
 metagenome_predictions <- read.delim("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/metagenome_predictions.txt")
 head(metagenome_predictions)
 
-ny <- as.characher(metagenome_predictions$KEGG_Description)
+ny <- as.character(metagenome_predictions$KEGG_Description)
 OTU<-metagenome_predictions$OTU.ID
 metagenome_predictions<-metagenome_predictions[,c(-1,-length(metagenome_predictions))]
 Samples <- colnames(metagenome_predictions)
 metagenome_predictions<-data.frame(t(metagenome_predictions))
 colnames(metagenome_predictions) <- ny
 
+OTU_table_Q1 <- read.delim("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/97_OTU_table_QIIME1.txt", header=T)
+head(OTU_table_Q1)
+X<-OTU_table_Q1[,c(1,length(OTU_table_Q1))]
 
 OTU_table<-read.delim("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/97_OTU.txt")
 head(OTU_table)
-nx<-OTU_table$OTU.ID
-OTU_table<-OTU_table[,-c(1,length(OTU_table))]
-OTU_table<-data.frame(t(OTU_table))
-colnames(OTU_table)<-nx
+colnames(OTU_table)[colnames(OTU_table)=="OTU.ID"] <- "OTU_ID"
+OTU_table<-merge(OTU_table,X, by="OTU_ID")
+OTU_table$taxonomy.x<-NULL
+colnames(OTU_table)[colnames(OTU_table)=="taxonomy.y"] <- "taxonomy"
+
+nx<-OTU_table$OTU_ID
+OTU_table_transpose<-OTU_table[,-c(1,length(OTU_table))]
+OTU_table_transpose<-data.frame(t(OTU_table_transpose))
+colnames(OTU_table_transpose)<-nx
 ```
 
 # OTU
 ## ANALYSIS
 
 ```{r}
-OTU.info<-data.frame(Sample=Samples, Alpha.div=rep(NA, length(Samples)),Taxonomy=rep(NA, length(Samples)), Function.Alpha.div=rep(NA, length(Samples)), Species=rep(NA, length(Samples)))
+OTU.info<-data.frame(SampleID=Samples, Alpha.div=rep(NA, length(Samples)),Species=rep(NA, length(Samples)),Taxonomy=rep(NA, length(Samples)), Function.Alpha.div=rep(NA, length(Samples)))
+OTU.info$SampleID<-as.character(OTU.info$SampleID)
+
+for(i in 1:length(Samples)){
+OTU.info$SampleID[i]<-Samples[i]
+OTU.info$Alpha.div[i]<-diversity(OTU_table[rownames(OTU_table)==Samples[i],], index = "shannon", MARGIN = 1, base = exp(1))
+OTU.info$Function.Alpha.div[i]<-diversity(metagenome_predictions[rownames(metagenome_predictions)==Samples[i],], index = "shannon", MARGIN = 1, base = exp(1))
+OTU.info$Species[i]<-mapping_file[mapping_file$SampleID==Samples[i],]$Species
+}
+
+OTU.info2<-merge(OTU.info, BioDatFull2, by="Species")
+Sample2<-OTU.info2$SampleID
+
+## Remove when Jeff gets the other data
 
 
 
+tail(sort(colSums(OTU_table.t), decreasing=T))
+out <- filter.OTU(data = list(otu=OTU_table), number = c(0,1)
+OTU_table.ns <- out[["otu"]]
+OTU_table<-OTU_table.ns
+OTU_table.t<-transpose.OTU(OTU_table)
 
+set.seed(1000)
+OTU_table.t.rrarefy<-rrarefy(OTU_table.t, sample=min(apply(OTU_table.t,1,sum)))
+dim(OTU_table.t.rrarefy)
 
+OTU_table.t.hell <- decostand(OTU_table.t, "hell")
+OTU_table.rf <- data.frame(as.data.frame(t(OTU_table.t.rrarefy)), 
+                      taxonomy=I(OTU_table[colnames(OTU_table.t.rrarefy), "taxonomy"]))
+# Seperate taxonomy
+OTU_table.rf$taxonomy<-as.character(OTU_table.rf$taxonomy)
+tax.classes <- c("kingdom", "phylum", "class", "order", "family", "genus", "species")
+OTU_table.rf.tax <- col.splitup(OTU_table.rf, col="taxonomy", sep="; ",drop=TRUE, names=tax.classes)
+OTU_table.rf.t <- transpose.OTU(OTU_table.rf)
+
+rarecurve(OTU_table.rf.t,step=20, sample=min(rowSums(OTU_table.rf.t)), col="blue", 
+          cex=0.6, xlab="Number of sequences", ylab="Number of OTUs", main="OTU")
 
 ```
 
