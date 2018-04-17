@@ -1,0 +1,9 @@
+
+Lodewyckx, C., Vangronsveld, J., Porteous, F., Moore, E.R.B., Taghavi, S., Mezgeay, M., et al. 2002. Critical Reviews in Plant Sciences 21: 583–606.
+Wemheuer, F., Kaiser, K., Karlovsky, P., Daniel, R., Vidal, S. & Wemheuer, B. 2017. Scientific Reports 7: 40914.
+Rodriguez, R.J., White Jr, J.F., Arnold, A.E. & Redman, R.S. 2009. New Phytologist 182: 314–330.
+Wearn, J.A., Sutton, B.C., Morley, N.J. & Gange, A.C. 2012. Journal of Ecology 100: 1085–1092.
+Rillig, M.C. & Mummey, D.L. 2006. New Phytologist 171: 41–53.
+Caporaso, J.G., Kuczynski, J., Stombaugh, J., Bittinger, K., Bushman, F.D., Costello, E.K., et al. 2010. Nature Methods 7: 335–336.
+Langille, M.G.I., Zaneveld, J., Caporaso, J.G., McDonald, D., Knights, D., Reyes, J.A., et al. 2013. Nature Biotechnology 31: 814–821.
+Bolger, A.M., Lohse, M. & Usadel, B. 2014. Bioinformatics 30: 2114–2120.
