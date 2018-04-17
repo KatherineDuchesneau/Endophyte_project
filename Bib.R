@@ -10,8 +10,12 @@ library(dplyr)
 install.packages("rcrossref")
 library(rcrossref)
 
+
 # base program
-# cr_cn(dois = "10.1111/j.1469-8137.2006.01750.x",format = "text", style = "nature")
+# cr_cn(dois = "10.1111/j.1469-8137.2006.01750.x",format = "text", style = "journal-of-evolutionary-biology")
+
+
+# DOI numbers:
 
 # 4 articles from poster
 # 10.1080/0735-260291044377
@@ -46,3 +50,5 @@ poster_litcited = function(dois=""){
     write(short_ref,file="poster_literature_cited.txt",append = TRUE)
   }
 }
+
+poster_litcited(dois)
