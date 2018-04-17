@@ -1,0 +1,23 @@
+project_id,folder,found_by,number_samples,host_species,lat ,long,location,source,data_link,paper_link,barcodes,lab_or_field_collection
+PRJNA343586,Chladophora,Kat,1,Chladophora oligoclona,40.5143,115.8187,China,SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP091023 ,,,
+PRJNA343586,Cratoneuron,Kat,1,Cratoneuron filicinum var. filicinum (Hedw.)?,40.5143,115.8187,China,SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP091023 ,,,
+PRJNA343586,Pylaisiella,Kat,1,Pylaisiella polyantha (Hedw.) Grout,40.5147,115.8188,China,SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP091023 ,,,
+PRJNA343586,Bryum,Kat,1,Bryum algovicum Sendt.,40.5146,115.8189,China,SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP091023 ,,,
+PRJNA343586,Grimmia,Kat,1,Grimmia pilifera P. Beauv.,40.515,115.8189,China,SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP091023 ,,,
+PRJNA325438,Orchid,Kat,1,Orchid Phalenopsis,10.548,76.255,"Vellanikkara, Kerala, India - (cord are estimatesd)",SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP078033,,,
+PRJNA307272,Pinus_flexilis,Kat,7,Pinus flexilis and Picea engelmanni,40.03,-105.53,USA,SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP067933,,,
+PRJEB7842,Populus,Kat,150,Populus balsamifera,50.52,-103.64,Canada lat:50.52 long:-103.64,SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=ERP008816,,,
+PRJEB7137,Solanum,Kat,9,Solanum lycopersicum,-34.95,-58.13,"La Plata, Argentina",SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJEB7137&go=go,,,
+PRJNA288708,Espeletia,Kat,12,Espeletia,4.87,-75.26,Colombia,SRA (3/3),https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP060388,,,
+PRJNA381586,Brassica_napus,Hannah,,Brassica napus,39.9,116.41,China,SRA (1/3),https://www.ncbi.nlm.nih.gov/bioproject/PRJNA381586/,,,
+PRJNA310879,Brassica_oleracea,Hannah,,Brassica oleracea,37.84,-84.27,USA,SRA (1/3),https://www.ncbi.nlm.nih.gov/bioproject/PRJNA310879,,,
+PRJNA327111,Pinus,Hannah,,Pinus pinaster,40.2,-8.41,"Neuherberg, Germany",SRA (1/3),https://www.ncbi.nlm.nih.gov/bioproject/PRJNA327111,,,
+PRJEB18130,Santiria,Jeff,9,Santiria apiculata A.W. Benn. var. apiculata (Burseraceae),2.91,101.79,Malaysia,ENA,https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=358365,https://link.springer.com/article/10.1007/s00248-017-1002-2,16S rRNA V3 (barcode 338F),Field
+PRJEB18130,Microdesmis,Jeff,9,Microdesmis caseariifolia Planch. ex Hook. f. (Pandaceae),2.91,101.79,Malaysia,ENA,https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=358365,https://link.springer.com/article/10.1007/s00248-017-1002-2,16S rRNA V3 (barcode 338F),Field
+PRJEB18130,Rothmannia,Jeff,9,Rothmannia macrophylla (Hook. f.) Bremek. (Rubiaceae),2.91,101.79,Malaysia,ENA,https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=358365,https://link.springer.com/article/10.1007/s00248-017-1002-2,16S rRNA V3 (barcode 338F),Field
+PRJNA286272,Vitis,Jeff,4,Vitis vinifera (grapes),13.1335,77.4889,"Bengaluru, India - (cord are estimated)",ENA,https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA286272,,NA,Lab
+NA,Paeonia_suffruticosa,Kat,NA,Paeonia_suffruticosa,34.71666667,112.4,NA,NA,NA,,,
+NA,Paeonia_rockii,Kat,NA,Paeonia_rockii,34.71666667,112.4,NA,NA,NA,,,
+NA,Oryza sativa,Kat,NA,Oryza sativa,22.956944,88.610833,"Kolkata, India ",NA,NA,,,
+NA,Aloe,Kat,NA,Aloe,3.235283,101.568342,NA,NA,NA,,,
+NA,Zea,Kat,NA,Zea,39,116,NA,NA,NA,,,
