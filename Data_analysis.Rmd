@@ -112,7 +112,7 @@ OTU_table<-merge(OTU_table,X, by="OTU_ID")
 OTU_table$taxonomy.x<-NULL
 colnames(OTU_table)[colnames(OTU_table)=="taxonomy.y"] <- "taxonomy"
 
-dist_matrix <- read.csv("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/dist_matrix_samples.csv", row.names=1)
+dist_matrix <- read.csv("~/Queens/Classes/Semester_4/Bio812_bioinf/Endophyte_project/Endophyte_project/Data/dist_matrix_done.csv", row.names=1)
 ```
 
 # OTU
@@ -167,7 +167,7 @@ OTU.info$Species[i]<-mapping_file[mapping_file$SampleID==Samples[i],]$Species
 
 OTU.info<- OTU.info[-nrow(OTU.info),]
 OTU.info$Species<-as.factor(OTU.info$Species) 
-detach(package:plyr)
+
 OTU.info %>% group_by(Species) %>% summarise(mean.Alpha.div=mean(Alpha.div)) -> OTU.info2
 OTU.info2<-merge(OTU.info2, BioDatFull2, by="Species")
 OTU.info2$Species<-as.factor(OTU.info2$Species)
@@ -192,14 +192,6 @@ colnames(OTU.info2)[colnames(OTU.info2)=="Precipitation.seasonality..C.of.V."] <
 
 
 Mydata<-OTU.info2[,c(1:6,8:10,16:17,19,21,23)]
-Y<-Mydata[,c(8:length(Mydata))]
-covar_cor = cor(Y)
-corrplot.mixed(covar_cor, upper = "ellipse", lower = "number")
-Mydata_PCA = dudi.pca(df = Y, scannf = FALSE, nf = 2, center = TRUE, scale = TRUE)
-Mydata_PCA$co
-s.corcircle(Mydata_PCA$co)
-Mydata_PCA$eig/sum(Mydata_PCA$eig)
-colnames(Mydata)
 
 Mydata$Lat <- scale(Mydata$Lat)
 Mydata$Long <- scale(Mydata$Long)
@@ -276,6 +268,8 @@ beta_divMat<- vegdist(OTU_table.tmatched, "bray",diag=T)
 
 # Are the endophytes more similar in species that are more closely related phylogenically? NO! 
 mantel(beta_divMat,dist_matrix)
+mantel.rtest(beta_divMat,as.dist(dist_matrix), nrepet = 9999)
+
 
 # are similarity in the endophyte composition driven by climate data?
 
@@ -381,6 +375,17 @@ library(ggplot2)
     coord_cartesian(xlim = c(-0.25,0.25),ylim = c(-0.1,0.1)) + 
     theme_katherine())
 ggsave("nmds.OTU_PLOT.pdf",OTU.nmds.gg1)
+
+
+#Mantel's distance
+Beta_Diversity<-c(beta_divMat)
+Phylogenic_distance<-c(as.dist(dist_matrix))
+manteldf<-data.frame(Beta_Diversity,Phylogenic_distance)
+
+(Mantel_OTU<-ggplot(manteldf, aes(y=Beta_Diversity,x=Phylogenic_distance))+
+  geom_point(alpha=0.5)+
+  coord_cartesian(ylim = c(0.95,1.0)) +theme_katherine())
+ggsave("Mantel_OTU_PLOT.pdf",Mantel_OTU)
 ```
 
 
@@ -508,14 +513,15 @@ metagenome_predictions2$SampleID<-NULL
 row.names(metagenome_predictions2)<-metagenome_predictions2$species
 metagenome_predictions2$Species<-NULL
 metagenome_predictions2$species<-NULL
-sum(is.na(metagenome_predictions2))
 
 metagenome_predictions2matched<-metagenome_predictions2[match(rownames(dist_matrix), rownames(metagenome_predictions2)), ]
-beta_divMat<- vegdist(metagenome_predictions2matched, "bray",diag=T)
+beta_divMatFUN<- vegdist(metagenome_predictions2matched, "bray",diag=T)
 
 
 # Are the endophytes more similar in species that are more closely related phylogenically? NO! 
-mantel(beta_divMat,dist_matrix)
+mantel(beta_divMatFUN,dist_matrix)
+mantel.rtest(beta_divMatFUN,as.dist(dist_matrix), nrepet = 9999)
+
 
 # are similarity in the endophyte composition driven by climate data?
 
@@ -635,4 +641,13 @@ ggsave("nmds.FUN_PLOTCLOSE.pdf",FUNCLOSE.nmds.gg1)
     geom_point( aes(color = NMDS.data$Species), size = 1.5,alpha=0.6)+ 
     theme_katherine())
 ggsave("nmds.FUN_PLOTFAR.pdf",FUNFAR.nmds.gg1)
+
+#Mantel's distance
+Beta_Diversity<-c(beta_divMatFUN)
+Phylogenic_distance<-c(as.dist(dist_matrix))
+manteldf<-data.frame(Beta_Diversity,Phylogenic_distance)
+
+(Mantel_FUN<-ggplot(manteldf, aes(y=Beta_Diversity,x=Phylogenic_distance))+
+  geom_point(alpha=0.5)+theme_katherine())
+ggsave("Mantel_FUN_PLOT.pdf",Mantel_FUN)
 ```
