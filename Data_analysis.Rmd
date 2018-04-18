@@ -552,7 +552,8 @@ varpart(metagenome_predictions2.hell, ~Lat + Long, ~ AnnualMeanTemperature + Mea
 ## FIGURES
 
 ```{r}
-metagenome_predictions.info$Species<-plyr::revalue(OTU.info$Species, c("Brassica_napus"="Brassica napus", "Brassica_oleracea"="Brassica oleracea","Cratoneuron"="Cratoneuron filicinum","Grimmia"="Grimmia pilifera","Microdesmis"="Microdesmis caseariifolia","Orchid"="Phalaenopsis","Oryza"="Oryza sativa","Paeonia_rockii"="Paeonia rockii","Paeonia_suffruticosa"="Paeonia suffruticosa","Pinus"="Pinus pinaster","Pinus_flexilis"="Pinus flexilis","Pylaisiella"="Pylaisia polyantha","Rothmannia"="Rothmannia macrophylla","Santiria"="Santiria apiculata","Solanum"="Solanum lycopersicum","Vitis"="Vitis vinifera","Zea"="Zea mays"))
+metagenome_predictions.info2$Species<-as.factor(metagenome_predictions.info2$Species)
+metagenome_predictions.info2$Species<-plyr::revalue(metagenome_predictions.info2$Species, c("Brassica_napus"="Brassica napus", "Brassica_oleracea"="Brassica oleracea","Cratoneuron"="Cratoneuron filicinum","Grimmia"="Grimmia pilifera","Microdesmis"="Microdesmis caseariifolia","Orchid"="Phalaenopsis","Oryza"="Oryza sativa","Paeonia_rockii"="Paeonia rockii","Paeonia_suffruticosa"="Paeonia suffruticosa","Pinus"="Pinus pinaster","Pinus_flexilis"="Pinus flexilis","Pylaisiella"="Pylaisia polyantha","Rothmannia"="Rothmannia macrophylla","Santiria"="Santiria apiculata","Solanum"="Solanum lycopersicum","Vitis"="Vitis vinifera","Zea"="Zea mays"))
 
 
 # Alpha to secies
@@ -587,11 +588,16 @@ ggsave("formulaRDA.FUN_PLOT.pdf",formulaRDA.FUNPLOT)
 
 # NMDS
 #Make a matrix with no row or column equal to 0 (do not enclude the env variable (GM COVERAGE))
-OTU_table.t2<-merge(OTU_table.t,X, by="SampleID")
-OTU_table.t2$SampleID<-NULL
-rownames.M<-OTU_table.t2$Species
-OTU_table.t2$Species<-NULL
-M <- as.matrix(OTU_table.t2)
+metagenome_predictions$SampleID<-rownames(metagenome_predictions)
+metagenome_predictions3<-merge(metagenome_predictions,X, by="SampleID")
+metagenome_predictions3$SampleID<-NULL
+metagenome_predictions3$Species<-as.factor(metagenome_predictions3$Species)
+metagenome_predictions3$Species<-plyr::revalue(metagenome_predictions3$Species, c("Brassica_napus"="Brassica napus", "Brassica_oleracea"="Brassica oleracea","Cratoneuron"="Cratoneuron filicinum","Grimmia"="Grimmia pilifera","Microdesmis"="Microdesmis caseariifolia","Orchid"="Phalaenopsis","Oryza"="Oryza sativa","Paeonia_rockii"="Paeonia rockii","Paeonia_suffruticosa"="Paeonia suffruticosa","Pinus"="Pinus pinaster","Pinus_flexilis"="Pinus flexilis","Pylaisiella"="Pylaisia polyantha","Rothmannia"="Rothmannia macrophylla","Santiria"="Santiria apiculata","Solanum"="Solanum lycopersicum","Vitis"="Vitis vinifera","Zea"="Zea mays"))
+
+rownames.M<-metagenome_predictions3$Species
+metagenome_predictions3$Species<-NULL
+metagenome_predictions3$SampleID<-NULL
+M <- as.matrix(metagenome_predictions3)
 M[is.na(M)] <- 0
 which( colSums(M)==0 )
 which( rowSums(M)==0 )
@@ -599,8 +605,9 @@ which( rowSums(M)==0 )
 rownames(M) <- rownames.M
 
 dist_M <- vegdist(M, method = "bray", binary = T)
-#The metaMDS analysis could have done the distance matrix internally but i would rather control it since i have presence/abscence
-meta.nmds <- metaMDS(dist_M, k=2, trymax = 2000)
+
+
+meta.nmds <- metaMDS(dist_M, k=2, trymax = 3000)
 str(meta.nmds)
 stressplot(meta.nmds)
 
@@ -617,10 +624,15 @@ NMDS.data$NMDS2<-meta.nmds$points[ ,2]
 colnames(NMDS.data)[1] <- "Species"
 
 mult <- 1 #multiplier for the arrows and text for envfit below. You can change this and then rerun the plot command.
-library(ggplot2)
-(OTU.nmds.gg1 <- ggplot(data = NMDS.data, aes(y = NMDS2, x = NMDS1))+ 
+
+(FUNCLOSE.nmds.gg1 <- ggplot(data = NMDS.data, aes(y = NMDS2, x = NMDS1))+ 
     geom_point( aes(color = NMDS.data$Species), size = 1.5,alpha=0.6)+ 
-    coord_cartesian(xlim = c(-0.25,0.25),ylim = c(-0.1,0.1)) + 
+    coord_cartesian(xlim = c(-0.2,0.1),ylim = c(-0.07,0.025)) + 
     theme_katherine())
-ggsave("nmds.OTU_PLOT.pdf",OTU.nmds.gg1)
+ggsave("nmds.FUN_PLOTCLOSE.pdf",FUNCLOSE.nmds.gg1)
+
+(FUNFAR.nmds.gg1 <- ggplot(data = NMDS.data, aes(y = NMDS2, x = NMDS1))+ 
+    geom_point( aes(color = NMDS.data$Species), size = 1.5,alpha=0.6)+ 
+    theme_katherine())
+ggsave("nmds.FUN_PLOTFAR.pdf",FUNFAR.nmds.gg1)
 ```
