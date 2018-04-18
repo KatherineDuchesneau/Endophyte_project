@@ -1,0 +1,16 @@
+
+Carrell, A.A. & Frank, A.C. 2014. Pinus flexilis and Piceae engelmannii share a simple and consistent needle endophyte microbiota with a potential role in nitrogen fixation. Frontiers in Microbiology 5. Frontiers Media SA.
+Romero, F.M., Marina, M. & Pieckenstain, F.L. 2014. The communities of tomato (Solanum lycopersicumL.) leaf endophytic bacteria, analyzed by 16S-ribosomal RNA gene pyrosequencing. FEMS Microbiology Letters 351: 187–194. Oxford University Press (OUP).
+Ruiz-Pérez, C.A., Restrepo, S. & Zambrano, M.M. 2016. Microbial and Functional Diversity within the Phyllosphere of Espeletia Species in an Andean High-Mountain Ecosystem. Applied and Environmental Microbiology 82: 1807–1817. American Society for Microbiology.
+Proença, D.N., Francisco, R., Kublik, S., Schöler, A., Vestergaard, G., Schloter, M., et al. 2017. The Microbiome of Endophytic, Wood Colonizing Bacteria from Pine Trees as Affected by Pine Wilt Disease. Scientific Reports 7. Springer Nature.
+Haruna, E., Zin, N.M., Kerfahi, D. & Adams, J.M. 2017. Extensive Overlap of Tropical Rainforest Bacterial Endophytes between Soil, Plant Parts, and Plant Species. Microbial Ecology 75: 88–103. Springer Nature.
+Yang, R., Liu, P. & Ye, W. 2017. Illumina-based analysis of endophytic bacterial diversity of tree peony ( Paeonia  Sect.  Moutan ) roots and leaves. Brazilian Journal of Microbiology 48: 695–705. Elsevier BV.
+Sengupta, S., Ganguli, S. & Singh, P.K. 2017. Metagenome analysis of the root endophytic microbial community of Indian rice ( O. sativa  L.). Genomics Data 12: 41–43. Elsevier BV.
+Lodewyckx, C., Vangronsveld, J., Porteous, F., Moore, E.R.B., Taghavi, S., Mezgeay, M., et al. 2002. Endophytic Bacteria and Their Potential Applications. Critical Reviews in Plant Sciences 21: 583–606. Informa UK Limited.
+Wemheuer, F., Kaiser, K., Karlovsky, P., Daniel, R., Vidal, S. & Wemheuer, B. 2017. Bacterial endophyte communities of three agricultural important grass species differ in their response towards management regimes. Scientific Reports 7: 40914. Springer Nature.
+Rodriguez, R.J., White Jr, J.F., Arnold, A.E. & Redman, R.S. 2009. Fungal endophytes: diversity and functional roles. New Phytologist 182: 314–330. Wiley-Blackwell.
+Wearn, J.A., Sutton, B.C., Morley, N.J. & Gange, A.C. 2012. Species and organ specificity of fungal endophytes in herbaceous grassland plants. Journal of Ecology 100: 1085–1092. Wiley-Blackwell.
+Rillig, M.C. & Mummey, D.L. 2006. Mycorrhizas and soil structure. New Phytologist 171: 41–53. Wiley-Blackwell.
+Caporaso, J.G., Kuczynski, J., Stombaugh, J., Bittinger, K., Bushman, F.D., Costello, E.K., et al. 2010. QIIME allows analysis of high-throughput community sequencing data. Nature Methods 7: 335–336. Springer Nature.
+Langille, M.G.I., Zaneveld, J., Caporaso, J.G., McDonald, D., Knights, D., Reyes, J.A., et al. 2013. Predictive functional profiling of microbial communities using 16S rRNA marker gene sequences. Nature Biotechnology 31: 814–821. Springer Nature.
+Bolger, A.M., Lohse, M. & Usadel, B. 2014. Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics 30: 2114–2120. Oxford University Press (OUP).
